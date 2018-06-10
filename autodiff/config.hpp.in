@@ -1,0 +1,19 @@
+#ifndef CONFIG_HPP_INCLUDED_2290120756642439228
+#define CONFIG_HPP_INCLUDED_2290120756642439228 1
+
+namespace AutoDiff
+{
+  namespace Config
+  {
+
+    major = ${AUTODIFF_MAJOR};
+    minor = ${AUTODIFF_MINOR};
+    update = ${AUTDIFF_UPDATE};
+
+    version = "${AUTODIFF_VERSION}";
+    version_update = "${AUTODIFF_VERSION_UPDATE}";
+    
+  } // end of namespace Config
+} // end of namespace AutoDiff
+
+#endif // !defined CONFIG_HPP_INCLUDED_2290120756642439228
