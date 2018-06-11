@@ -16,9 +16,9 @@
   {								\
     ++accum;							\
     std::cout << __FILE__ << ':' << __LINE__ << ":0"		\
-	      << "AUTODIFF test failure\n"			\
+	      << " AUTODIFF test failure\n"			\
 	      << AUTODIFF_TEST_PRINT( __VA_ARGS__ ) << '\n'	\
-	      << "did not evaluate to true.\n\n";		\
+	      << " did not evaluate to true.\n\n";		\
   }
   
 

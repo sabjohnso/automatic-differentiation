@@ -5,6 +5,7 @@
 // ... Standard header files
 //
 #include <cstddef>
+#include <cmath>
 #include <utility>
 #include <type_traits>
 
@@ -32,19 +33,15 @@ namespace AutoDiff
     using std::forward;
     using std::move;
 
-
-
     using TypeUtility::type;
     using TypeUtility::type_pure;
     using TypeUtility::Type1;
     using TypeUtility::integer;
 
-
-
-    
     using FunctionUtility::pcompose;
     using FunctionUtility::compose;
     using FunctionUtility::dup;
+    using FunctionUtility::identity;
 
 
     using Operators::Arithmetic;
@@ -56,8 +53,26 @@ namespace AutoDiff
     using Operators::add;
     using Operators::multiply;
     using Operators::divide;
-    using Operators::sine;
     using Operators::cosine;
+    using Operators::sine;
+    using Operators::tangent;
+    using Operators::arccosine;
+    using Operators::arcsine;
+    using Operators::arctangent; 
+    using Operators::hyperbolic_cosine;
+    using Operators::hyperbolic_sine;
+    using Operators::hyperbolic_tangent;
+    using Operators::area_hyperbolic_cosine;
+    using Operators::area_hyperbolic_sine;
+    using Operators::area_hyperbolic_tangent;
+    using Operators::logarithm;
+    using Operators::logarithm10;
+    using Operators::exponent;
+    using Operators::square_root;
+    using Operators::cube_root;
+    using Operators::floor_function;
+    using Operators::ceil_function;
+    using Operators::power;
 
     using Operators::Plus;
     using Operators::Minus;
@@ -65,8 +80,6 @@ namespace AutoDiff
     using Operators::Subtraction;
     using Operators::Multiplication;
     using Operators::Division;
-
-
     
     using Operators::Cosine;
     using Operators::Sine;
@@ -100,6 +113,9 @@ namespace AutoDiff
     using Operators::Maximum;
 
     using Operators::FusedMultiplyAdd;
+
+
+    
 
   } // end of namespace Core
 } // end of namespace AutoDiff

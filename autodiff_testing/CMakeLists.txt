@@ -4,5 +4,6 @@ macro( autodiff_add_simple_test  name )
 endmacro( autodiff_add_simple_test  name )
 
 autodiff_add_simple_test( dual )
+autodiff_add_simple_test( irrational )
 
 

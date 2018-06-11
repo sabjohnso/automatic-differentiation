@@ -1,0 +1,40 @@
+#+TITLE: Automatic Differentiation
+
+* Status
+  
+  Unstable and unsuitable for used, production or otherwise.
+
+* Overview
+
+  Automatic differentiation including dual arithmetic, compile-time
+  and runtime reverse-mode automatic differentiation, adjoint model
+  derivation, and polyhedral modeling.
+
+** Dual arithmetic
+** Reverse-mode 
+** Adjoint model
+** Polyhedral modeling
+** Matrix-vector multiplication
+
+
+* Work
+
+** TODO tgamma and lgamma derivatives
+*** TODO review library availability
+    The polygamma function is required. What libraries provide it.
+*** TODO evaluate boost (known availability)
+    Conditionally, use boost as a dependency and consume the polygamma
+    implementation from there to support the derivative to the tgamma
+    and lgamma functions in the standard library.
+*** TODO evaluate inclusion of additional special functions
+    If the weight of a third-party library is to be supported, it
+    might be worth consuming other special functions provided by the
+    library.
+
+
+
+   
+
+   
+
+

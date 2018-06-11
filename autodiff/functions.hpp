@@ -13,10 +13,12 @@ namespace AutoDiff
   namespace Core
   {
 
+    
 
     template< typename T >
     class Constant : Value<T> {
     public:
+      
       using value_type = T;
       using base = Value<value_type>;
 
@@ -30,9 +32,13 @@ namespace AutoDiff
       constexpr value_type &&
       operator ()( Ts ... ) && { return move( base::value ); }
 
-	
+      
 
     }; //end of class constant
+
+
+    
+    
 
 
     template< typename T >
@@ -40,6 +46,8 @@ namespace AutoDiff
     constant( T&& x ){
       return Constant<decay_t<T>>( x );
     }
+
+
 
 
 
@@ -60,7 +68,16 @@ namespace AutoDiff
       constexpr auto
       operator ()( T&&, U&& y ) const & { return forward<U>( y ); }
     } right{};
-    
+
+
+
+    constexpr auto sqr = compose( multiply, dup );
+    constexpr auto twc = compose( add, dup );
+    constexpr auto rcp = compose( divide, 
+				  pcompose( constant( 1 ),
+					    identity),
+				  dup );
+
 
     
     
