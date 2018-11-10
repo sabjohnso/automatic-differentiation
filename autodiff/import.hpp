@@ -35,6 +35,7 @@ namespace AutoDiff
 
     using TypeUtility::type;
     using TypeUtility::type_pure;
+    using TypeUtility::Type;
     using TypeUtility::Type1;
     using TypeUtility::integer;
 

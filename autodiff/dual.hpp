@@ -93,11 +93,27 @@ namespace AutoDiff
       
       real_type re;
       dual_type du;
+
+      template< typename Stream >
+      friend Stream&
+      operator <<( Stream& os, const Dual& x ){
+	os << type<Dual> << '(' << x.re << ',' << x.du << ')';
+	return os;
+      }
+
       
       
     }; // end of class Dual
 
-
+    
+    
+    template< typename Stream >
+    Stream&
+    operator <<( Stream& os, Type<Type1<Dual>>  ){
+      os << "AutoDiff::Core::Dual";
+      return os;
+    }
+    
     template< typename Stream >
     Stream&
     operator <<( Stream& os, Type1<Dual>  ){
@@ -105,12 +121,7 @@ namespace AutoDiff
       return os;
     }
 
-    template< typename Stream, typename R, typename D >
-    Stream&
-    operator <<( Stream& os, const Dual<R,D>& x ){
-      os << type<Dual<R,D>> << '(' << re( x ) << ',' << du( x ) << ')';
-      return os;
-    }
+
 
 
       
